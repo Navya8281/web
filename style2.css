@@ -1,31 +1,38 @@
-External Style Sheet: style2.css
+*{ 
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	 }
 
-body { margin: 100px auto; }
+.rectangles {
+	outline: 5px solid black;
 
-.parent { width: 500px;
-
-border: 1px solid red;
-
-margin: auto;
+margin: 50px;
 
 text-align: center;
-
 position: relative; }
 
-.child { border-radius: 10%;
 
-width: 100px;
+.rectangle { 
+
+
 
 height: 100px;
 
-margin: 20px; }
+outline: 1px solid black; }
 
-.one { background-color: powderblue;
+.one { background-color: purple; }
 
-position: absolute;}
+.two { background-color: pink; }
 
-.two { background-color: royalblue; }
+.three { background-color: lightgoldenrodyellow; }
 
-.three { background-color: sienna; }
+.four { background-color: violet;
+position: absolute;
+top: 0%;
+left: 0% ;
+right: 0%;
+}
 
-.four { background-color: slateblue; }
+
+.five { background-color: rosybrown; }
