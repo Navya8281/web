@@ -1,27 +1,33 @@
-body 
-{ 
-	margin: 100px auto; }
+ 
+*{ 
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	 }
 
-.parent { width: 500px;
+.rectangles {
+	outline: 5px solid black;
 
-border: 1px solid red;
+margin: 50px;
 
-margin: auto;
+text-align: center;
+position: relative; }
 
-text-align: center; }
 
-.child { border-radius: 10%;
+.rectangle { 
 
-width: 100px;
+
 
 height: 100px;
 
-margin: 20px; }
+outline: 1px solid black; }
 
-.one { background-color: powderblue; }
+.one { background-color: purple; }
 
-.two { background-color: royalblue; }
+.two { background-color: pink; }
 
-.three { background-color: sienna; }
+.three { background-color: lightgoldenrodyellow; }
 
-.four { background-color: slateblue; }
+.four { background-color: violet; }
+
+.five { background-color: rosybrown; }
