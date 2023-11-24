@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rose Travels</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/tablog.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/tablog.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/tablog.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Rose Travels" />
+    <meta name="keywords" content="Ahmedabad | Amritsar | Bangalore | Bhopal | Chandigarh | Chennai | Coimbatore | Delhi |Hyderabad | Indore | Jabalpur | Jaipur | Kanpur | Kolkata | Lucknow | Mumbai | Nagpur | Patna | Pune | Rajkot | Ranchi | Surat | Varanasi | Vizag & many more." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+#popup {
+    display:none;
+    position:absolute;
+    margin:0 auto;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 50px 2px #000;
+    
+}
+.mbpop{
+        width:800px;
+    }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+   .mbpop{
+        width:100%;
+    }
+    #popup {
+    display:none;
+    position:absolute;
+    margin:0 auto;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 50px 2px #000;
+}
+}
+
+@media only screen and (max-width: 767px) {
+    .mbpop{
+        width:100%;
+    }
+    #popup {
+    display:none;
+    position:absolute;
+    margin:0 auto;
+    top: 280px;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 50px 2px #000;
+}
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1900px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#26262c;
+  display:none;
+}  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+ 
+  
+  display:none;
+  z-index:9999;
+  padding:20px;
+  border-radius: 5px;
+  text-align: center;
+}
+#boxes #dialog {
+ 
+  height:auto;
+  padding: 10px 10px 10px 10px;
+  background-color:#ffffff;
+  font-size: 15pt;
+}
+
+.agree:hover{
+  background-color: #D1D1D1;
+}
+.popupoption:hover{
+	background-color:#D1D1D1;
+	color: green;
+}
+.popupoption2:hover{
+	color: red;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+
+/* Fading animation */
+.fade1 {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="assets/vendors/tevily-icons/style.css">
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/vendors/twentytwenty/twentytwenty.css" />
+    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/tevily.css" />
+    <link rel="stylesheet" href="assets/css/tevily-responsive.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        <style>
+    .c{
+        color: #4e87b6 !important;
+    }
+</style>
+<header class="main-header clearfix">
+            <div class="main-header__top">
+                <div class="container">
+                    <div class="main-header__top-inner clearfix">
+                        <div class="main-header__top-left">
+                            <ul class="list-unstyled main-header__top-address">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-phone-call"></span>
+                                    </div>
+                                    <div class="text">
+                                        <a href="tel:+91 9693 90 90 90"><b style="color:#fff;">+91 9693 90 90 90</b></a>
+                                    </div>
+                                </li>
+                                
+                                
+                                
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-at"></span>
+                                    </div>
+                                    <div class="text">
+                                        <a href="mailto:info@rosetravelsonline.com"><b style="color:#fff;">info@rosetravelsonline.com</b></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-header__top-right">
+                            <div class="main-header__top-right-inner">
+                                <div class="main-header__top-right-social">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                                <div class="main-header__top-right-btn-box thm-btn main-header__top-right-btn">
+                                   <img src="assets/images/resources/iata3.png" alt=""> IATA approved agency since 1987
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-menu clearfix">
+                <div class="main-menu-wrapper clearfix">
+                    <div class="container clearfix">
+                        <div class="main-menu-wrapper-inner clearfix">
+                            <div class="main-menu-wrapper__left clearfix">
+                                <div class="main-menu-wrapper__logo">
+                                    <a href="index.php"><img src="assets/images/resources/roselogo.png" alt="" style="width: 260px;"></a>
+                                </div>
+                                <div class="main-menu-wrapper__main-menu">
+                                    <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                    <ul class="main-menu__list">
+                                        <li><a href="index.php"  class='active c' >Home</a></li>
+                                        <li><a href="about.php"  >About Us</a></li>
+                                         <li><a href="holidays.rosetravelsonline.com"  target="_blank">Holidays</a></li>
+                                        <li><a href="services.php"  >Services</a></li>
+                                        <li><a href="contact.php"  >Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->  
+       
+    <div class="slideshow-container">
+
+<div class="mySlides fade1">
+  
+  <img src="assets/images/backgrounds/home11.jpg" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade1">
+  
+  <img src="assets/images/backgrounds/home12.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade1">
+  
+  <img src="assets/images/backgrounds/home13.jpg" style="width:100%">
+  
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+        <!--Main Slider Start-->
+       
+
+       
+
+        <!--Destinations One Start-->
+        <section class="destinations-one">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Destination lists</span>
+                    <h2 class="section-title__title">Go Exotic Places</h2>
+                </div>
+                <div class="row masonary-layout">
+                    <div class="col-xl-3 col-lg-3"  title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">
+                        <div class="destinations-one__single">
+                            <div class="destinations-one__img">
+                                <img src="assets/images/destination/spain1.png" alt="">
+                                <div class="destinations-one__content">
+                                    <h2 class="destinations-one__title"><a href="#" title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">Spain</a>
+                                    </h2>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6"  title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">
+                        <div class="destinations-one__single">
+                            <div class="destinations-one__img">
+                                <img src="assets/images/destination/thailand.png" alt="">
+                                <div class="destinations-one__content">
+                                    <p class="destinations-one__sub-title" style="color: #fff;">Wildlife</p>
+                                    <h2 class="destinations-one__title"><a href="#"  title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">Thailand</a>
+                                    </h2>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3"  title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">
+                        <div class="destinations-one__single">
+                            <div class="destinations-one__img">
+                                <img src="assets/images/destination/africa.png" alt="">
+                                <div class="destinations-one__content">
+                                    <h2 class="destinations-one__title"><a href="#"  title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">Africa</a>
+                                    </h2>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6"  title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">
+                        <div class="destinations-one__single">
+                            <div class="destinations-one__img">
+                                <img src="assets/images/destination/australia.png" alt="">
+                                <div class="destinations-one__content">
+                                    <h2 class="destinations-one__title"><a
+                                            href="#"  title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">Australia</a></h2>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6"  title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">
+                        <div class="destinations-one__single">
+                            <div class="destinations-one__img">
+                                <img src="assets/images/destination/switzerland.png" alt="">
+                                <div class="destinations-one__content">
+                                    <p class="destinations-one__sub-title" style="color: #fff;">Adventure</p>
+                                    <h2 class="destinations-one__title"><a
+                                            href="#"  title="We offer custom-made holidays worldwide. Need some help to plan your next trip, we are here! Kindly call us at +91 9693 90 90 90">Switzerland</a></h2>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--Destinations One End-->
+
+        <!--About One Start-->
+        <section class="about-one">
+            <div class="about-one-shape-1 wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+                <img src="assets/images/shapes/about-one-shape-1.png" alt="">
+            </div>
+            <div class="about-one-shape-2 float-bob-y"><img src="assets/images/shapes/about-one-shape-2.png" alt="">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-duration="1500ms">
+                        <div class="about-one__left">
+                            <div class="about-one__img-box">
+                                <div class="about-one__img">
+                                    <img src="assets/images/resources/about-one-img-1.png" alt="">
+                                </div>
+                                <div class="about-one__call" style="display:block;    left: -40px;">
+                                    <div class="about-one__call-icon">
+                                        <span class="icon-phone-call"></span>
+                                    </div>
+                                    <div class="about-one__call-number">
+                                        <p>Book Tour Now</p>
+                                        <h4><a href="tel:+91 9693 90 90 90">+91 9693 90 90 90</a></h4>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="about-one__right">
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline">Get to know us</span>
+                                <h2 class="section-title__title">Plan Your Travel with Rose Travels</h2>
+                            </div>
+                            <p class="about-one__right-text">We are one of the most reputed travel agency based in Mumbai to provide the best and most trusted user experiences. We are an IATA - approved travel company for more than three decades.<br>
+We cover the three basic concepts of travel-</p>
+                            <ul class="list-unstyled about-one__points">
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>Work</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>Leisure</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                    <div class="text">
+                                        <p>Luxury</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="about.php" class="about-one__btn thm-btn">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--About One End-->
+        
+        <!--Popular Tours Two Start-->
+        <section class="popular-tours-two">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Our Services</span>
+                    <h2 class="section-title__title">Serving Since 39 years</h2>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                            <div class="popular-tours__img">
+                                    <img src="assets/images/resources/business.jpg" alt="">
+                                   
+                                </div>
+                                <div class="popular-tours__content">
+                                    <h3 class="popular-tours__title"><a href="#">Business Travel </a></h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                            <div class="popular-tours__img">
+                                    <img src="assets/images/resources/international.jpg" alt="">
+                                   
+                                </div>
+                                <div class="popular-tours__content">
+                                    <h3 class="popular-tours__title"><a href="#">International & Domestic Holidays </a></h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                           <div class="popular-tours__img">
+                                    <img src="assets/images/resources/visa.jpg" alt="">
+                                </div>
+                                <div class="popular-tours__content">
+                                    <h3 class="popular-tours__title"><a href="#">VISA </a></h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                           <div class="popular-tours__img">
+                                    <img src="assets/images/resources/popup.jpg" alt="">
+                                    
+                                </div>
+                                <div class="popular-tours__content">
+                                   
+                                    <h3 class="popular-tours__title"><a href="#">MOBILE VISA SUBMISSION </a></h3>
+                                   
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                           <div class="popular-tours__img">
+                                    <img src="assets/images/resources/24.jpg" alt="">
+                                    
+                                </div>
+                                <div class="popular-tours__content">
+                                   
+                                    <h3 class="popular-tours__title"><a href="#">24x7 Hours Service </a></h3>
+                                   
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                           <div class="popular-tours__img">
+                                    <img src="assets/images/resources/fastest.jpg" alt="">
+                                </div>
+                                <div class="popular-tours__content">
+                                    <h3 class="popular-tours__title"><a href="#">Fastest Ticket Bookings </a></h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                           <div class="popular-tours__img">
+                                    <img src="assets/images/resources/foreign.jpg" alt="">
+                                </div>
+                                <div class="popular-tours__content">
+                                    <h3 class="popular-tours__title"><a href="#">Foreign Exchange </a></h3>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                           <div class="popular-tours__img">
+                                    <img src="assets/images/resources/travel.jpg" alt="">
+                                </div>
+                                <div class="popular-tours__content">
+                                    <h3 class="popular-tours__title"><a href="#">Travel Insurance </a></h3>
+                                </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </section>
+        <!--Popular Tours Two End-->
+
+        <!--Popular Tours Start-->
+       <!-- <section class="popular-tours">
+            <div class="popular-tours__container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Featured Services</span>
+                    <h2 class="section-title__title">We will serve you with</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="popular-tours__carousel owl-theme owl-carousel">
+                           
+                            <div class="popular-tours__single">
+                                <div class="popular-tours__img">
+                                    <img src="assets/images/resources/business.jpg" alt="">
+                                   
+                                </div>
+                                <div class="popular-tours__content">
+                                    
+                                    <h3 class="popular-tours__title"><a href="#">Business Travels </a></h3>
+                                    
+                                </div>
+                            </div>
+                            <div class="popular-tours__single">
+                                <div class="popular-tours__img">
+                                    <img src="assets/images/resources/international.jpg" alt="">
+                                   
+                                </div>
+                                <div class="popular-tours__content">
+                                    
+                                    <h3 class="popular-tours__title"><a href="#">International & Domestic Holidays </a></h3>
+                                    
+                                </div>
+                            </div>
+                            <div class="popular-tours__single">
+                                <div class="popular-tours__img">
+                                    <img src="assets/images/resources/visa.jpg" alt="">
+                                   
+                                </div>
+                                <div class="popular-tours__content">
+                                    
+                                    <h3 class="popular-tours__title"><a href="#">VISA & Documents </a></h3>
+                                    
+                                </div>
+                            </div>
+                            <div class="popular-tours__single">
+                                <div class="popular-tours__img">
+                                    <img src="assets/images/resources/24.jpg" alt="">
+                                    
+                                </div>
+                                <div class="popular-tours__content">
+                                   
+                                    <h3 class="popular-tours__title"><a href="#">24 Hours Service </a></h3>
+                                   
+                                </div>
+                            </div>
+                            <div class="popular-tours__single">
+                                <div class="popular-tours__img">
+                                    <img src="assets/images/resources/fastest.jpg" alt="">
+                                </div>
+                                <div class="popular-tours__content">
+                                    <h3 class="popular-tours__title"><a href="#">Fastest Ticket Bookings </a></h3>
+                                </div>
+                            </div>
+                            <div class="popular-tours__single">
+                                <div class="popular-tours__img">
+                                    <img src="assets/images/resources/foreign.jpg" alt="">
+                                </div>
+                                <div class="popular-tours__content">
+                                    <h3 class="popular-tours__title"><a href="#">Foreign Exchange </a></h3>
+                                </div>
+                            </div>
+                            <div class="popular-tours__single">
+                                <div class="popular-tours__img">
+                                    <img src="assets/images/resources/travel.jpg" alt="">
+                                </div>
+                                <div class="popular-tours__content">
+                                    <h3 class="popular-tours__title"><a href="#">Travel Insurance </a></h3>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+        <!--Popular Tours End-->
+
+        <!--Video One Start-->
+        <section class="video-one">
+            <div class="video-one-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+                style="background-image: url(assets/images/backgrounds/video-one-bg.jpg)"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="video-one__left">
+                            
+                            <p class="video-one__tagline">Are you ready to travel?</p>
+                            <h2 class="video-one__title">Rose Travels is a World Leading Tour Platform</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="video-one__right">
+                            <ul class="list-unstyled video-one__four-icon-boxes">
+                                <li>
+                                    <div class="video-one__icon-box">
+                                        <span class="icon-deer"></span>
+                                    </div>
+                                    <h4 class="video-one__icon-box-title"><a href="#">Wildlife <br> Tours</a></h4>
+                                </li>
+                                <li>
+                                    <div class="video-one__icon-box">
+                                        <span class="icon-paragliding"></span>
+                                    </div>
+                                    <h4 class="video-one__icon-box-title"><a href="#">Paragliding <br> Tours</a></h4>
+                                </li>
+                                <li>
+                                    <div class="video-one__icon-box">
+                                        <span class="icon-flag"></span>
+                                    </div>
+                                    <h4 class="video-one__icon-box-title"><a href="#">Adventure <br> Tours</a></h4>
+                                </li>
+                                <li>
+                                    <div class="video-one__icon-box">
+                                        <span class="icon-hang-gliding"></span>
+                                    </div>
+                                    <h4 class="video-one__icon-box-title"><a href="#">Hang Gliding <br> Tours</a></h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Video One End-->
+
+        <!--Brand One Start-->
+        <section class="brand-one">
+            <div class="brand-one-shape" style="background-image: url(assets/images/shapes/brand-one-shape.png)"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="brand-one__title">
+                            <h2>Members Of</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-9">
+                        <div class="brand-one__main-content">
+                            <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 100, "slidesPerView": 5, "autoplay": { "delay": 5000 }, "breakpoints": {
+                        "0": {
+                            "spaceBetween": 30,
+                            "slidesPerView": 2
+                        },
+                        "375": {
+                            "spaceBetween": 30,
+                            "slidesPerView": 2
+                        },
+                        "575": {
+                            "spaceBetween": 30,
+                            "slidesPerView": 3
+                        },
+                        "767": {
+                            "spaceBetween": 50,
+                            "slidesPerView": 4
+                        },
+                        "991": {
+                            "spaceBetween": 50,
+                            "slidesPerView": 5
+                        },
+                        "1199": {
+                            "spaceBetween": 50,
+                            "slidesPerView": 5
+                        }
+                    }}'>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/brand/m11.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/brand/m12.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/brand/m13.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/brand/brand-one-4.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/brand/brand-one-5.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/brand/brand-one-1.png" alt="">
+                                    </div><!-- /.swiper-slide -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Brand One End-->
+        
+        <!--Popular Tours Two Start-->
+        <section class="popular-tours-two">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Our Services</span>
+                    <h2 class="section-title__title">Serving Since 39 years</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                            <div class="popular-tours__img">
+                                <img src="assets/images/resources/work1.jpg" alt="">
+                                
+                            </div>
+                            <div class="popular-tours__content" style="height: 490px">
+                               
+                                <h3 class="popular-tours__title"><a href="services.php">Work</a></h3>
+                                        <p>Seal that overseas business deal! Rose Travels will take care of your travel-related needs while you are at a conference. We believe in providing you with the best and most trusted user experiences.
+Let us take care of you while you are at work. We assure you that your travel will be not only comfortable but also hassle-free, letting you focus on your purpose.
+Let us render our travel services to you for making your trip comfortable, convenient and full of ease.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                            <div class="popular-tours__img">
+                                <img src="assets/images/resources/leisure1.jpg" alt="">
+                                
+                            </div>
+                            <div class="popular-tours__content" style="height: 490px">
+                               
+                                <h3 class="popular-tours__title"><a href="services.php">Leisure</a></h3>
+                                        <p>Enjoy a break and travel to exotic destinations away from the hustle and bustle of life! Take a backseat and let us serve you at your long solo vacation.
+Let Rose Travels redefine 'Leisure' for you with an incredibly comfortable trip, exquisite locations, breathtaking views and world-class services.
+We would love to assist you and provide you with our best services for your leisure getaway.</p><br><br>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Popular Tours Two Single-->
+                        <div class="popular-tours__single">
+                            <div class="popular-tours__img">
+                                <img src="assets/images/resources/luxury1.jpg" alt="">
+                                
+                            </div>
+                            <div class="popular-tours__content" style="height: 490px">
+                               
+                                <h3 class="popular-tours__title"><a href="services.php">Luxury</a></h3>
+                                        <p>Home is where the family is! Your family deserves the best of travel experiences. We would help you to build a home away from your home and generate that family vibes.
+Rose Travels assures you of arranging the best family package and would leave no stone unturned to provide you and your family a fun-filled vacation.
+We believe in providing you and your family the best of our services to make it the most memorable trip with loads of fun, frolic, laughter and memories.</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </section>
+        <!--Popular Tours Two End-->
+
+
+        <!--Why Choose Start-->
+        <section class="why-choose">
+            <div class="why-choose__container">
+                <div class="why-choose__left">
+                    <div class="why-choose__left-bg"
+                        style="background-image: url(assets/images/backgrounds/why-choose-left-bg.jpg)"></div>
+                    <div class="why-choose__toggle">
+                        <p>Trips <br> & tours</p>
+                    </div>
+                </div>
+                <div class="why-choose__right">
+                    <div class="why-choose__right-map"
+                        style="background-image: url(assets/images/shapes/why-choose-right-map.png)"></div>
+                    <div class="why-choose__right-content">
+                        <div class="section-title text-left">
+                            <span class="section-title__tagline">Our benefit lists</span>
+                            <h2 class="section-title__title">Why Choose Rose Travels</h2>
+                        </div>
+                        <p class="why-choose__right-text">We want you to have the utmost confidence in booking your trip with Rose Travels. You can depend on us to deliver high standards of quality and trust, as these core values are the cornerstones of who we are.</p>
+                        <ul class="list-unstyled why-choose__list">
+                            <li>
+                                <div class="icon">
+                                    <span class="icon-travel"></span>
+                                </div>
+                                <div class="text">
+                                    <h4>Professional and Certified</h4>
+                                    <p></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon">
+                                    <span class="icon-travel-map"></span>
+                                </div>
+                                <div class="text">
+                                    <h4>Get Instant Tour Bookings</h4>
+                                    <p></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Why Choose End-->
+
+       <div id="boxes">
+<div style="" id="dialog" class="window"> 
+<div id="san">
+<a href="#" class="close agree"><img src="close-icon.png" width="25" style="float:right; margin-right: -25px; margin-top: -20px;"></a>
+<img src="assets/images/resources/popup.jpg" class="impop mbpop" >
+</div>
+</div>
+<div style="width: 2478px; font-size: 32pt; color:white; height: 1202px; display: none; opacity: 0.4;" id="mask"></div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
+<script src="swc.js"></script>
+
+        <!--Site Footer One Start-->
+        <footer class="site-footer">
+            
+            <div class="site-footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <div class="site-footer__bottom-left">
+                                    <p style="font-size: 15px;
+    color: var(--thm-gray);
+    font-weight: 500;
+    margin: 0;">@ 2022 Rose Travels. All Rights Reserved.  | <a href="privacy.php">Privacy Policy</a></p>
+                                   
+                                </div>
+                                <div class="site-footer__bottom-right">
+                                    <p>Brand Companion : <a href="http://navzoo.com/">Navzoo</p>
+                                </div>
+                                <div class="site-footer__bottom-left-arrow">
+                                    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-plane" style="transform: rotate(-90deg); color: #fff;"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        	<style>.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:20px;
+	right:10px;
+	background-color:#25d366;
+	color:#FFFFFF;
+	border-radius:80px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float1{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:100px;
+	right:10px;
+	background-color:#25d366;
+	color:#FFFFFF;
+	border-radius:80px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+	transform: rotate(91deg);
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}</style>
+
+<a href="tel:+91-9693909090"  class="float1" target="_blank">
+<i class="fas fa-phone my-float"></i>
+</a>
+<a href="https://api.whatsapp.com/send?phone=919693909090" class="float" target="_blank">
+<i class="fab fa-whatsapp my-float"></i>
+</a>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75685806-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-75685806-1');
+</script>
+
+
+    
+<script>
+    $(window).on('load',function(){
+    var delayMs = 500; // delay in milliseconds
+    
+    setTimeout(function(){
+        $('#myModal').modal('show');
+    }, delayMs);
+});
+
+// function CheckChecked()
+// {
+// var x = document.getElementById("ch").checked;
+//     if (x)
+// {
+// $('#myModal').modal('hide');
+// }
+// }
+</script>  
+        <!--Site Footer One End-->
+
+
+    </div><!-- /.page-wrapper -->
+
+
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <!-- /.mobile-nav__overlay -->
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+            <div class="logo-box">
+                <a href="index.php" aria-label="logo image"><img src="assets/images/resources/footerlogo.png" width="155"
+                        alt="" /></a>
+            </div>
+            <!-- /.logo-box -->
+            <div class="mobile-nav__container"></div>
+            <!-- /.mobile-nav__container -->
+
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:info@rosetravelsonline.com">info@rosetravelsonline.com</a>
+                </li>
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:+91 9693 90 90 90">+91 9693 90 90 90</a>
+                </li>
+            </ul><!-- /.mobile-nav__contact -->
+            <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                    
+                    <a href="#" class="fab fa-facebook"></a>
+                  
+                    <a href="#" class="fab fa-instagram"></a>
+                      <a href="#" class="fab fa-linkedin"></a>
+                </div><!-- /.mobile-nav__social -->
+            </div><!-- /.mobile-nav__top -->
+
+            <div class="main-header__top-right-btn-box thm-btn main-header__top-right-btn">
+                                   <img src="assets/images/resources/iata3.png" alt=""> IATA approved agency since 1987
+                                </div>
+
+        </div>
+        <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+
+  
+
+    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.min.js"></script>
+    <script src="assets/vendors/swiper/swiper.min.js"></script>
+    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="assets/vendors/wow/wow.js"></script>
+    <script src="assets/vendors/isotope/isotope.js"></script>
+    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendors/twentytwenty/twentytwenty.js"></script>
+    <script src="assets/vendors/twentytwenty/jquery.event.move.js"></script>
+    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/vegas/vegas.min.js"></script>
+    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="assets/vendors/timepicker/timePicker.js"></script>
+
+    <!-- template js -->
+    <script src="assets/js/tevily.js"></script>
+    
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 1000);
+}
+</script>
+
+</body>
+
+</html>

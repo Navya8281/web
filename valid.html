@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Validation></title>
+<link rel="stylesheet" type="text/css" href="valid.css">
+<style>
+ .div1{  
+        height: 700px;  
+        width: 500px;  
+        border: 5px solid  	#00008B;  
+  border-radius: 20px;
+      } 
+      
+</style>
+</head>
+<body>
+<center>
+<h1 style="color:    #3f33ff   ;">Sign Up Form</h1>
+<br>
+<br>
+<br>
+<div class="div1">  
+<form >
+<center>
+<label>Username:</label>
+			<input type="text" name="User" id="Username" class="form-control" autocomplete="off" required><span id="Usernameid"></span>
+			<p id="demo1" style="color:red;"></p>
+<label>Password:</label>
+			<input type="text" name="User" id="password" class="form-control" autocomplete="off" required><span id="passwords"></span>
+			<p id="demo2" style="color:red;"></p>
+			
+<label>Confirm Password:</label>
+			<input type="text" name="User" id="passwordconfrm" class="form-control" autocomplete="off" required><span id="confrmpassword"></span>
+			<p id="demo3" style="color:red;"></p>
+			
+<label>Mobile Number:</label>
+			<input type="text" name="User" id="numbermobile" class="form-control" autocomplete="off" required><span id="mobilenumber"></span>
+			<p id="demo4" style="color:red;"></p>
+
+<label>Email:</label>
+			<input type="text" name="User" id="emailid" class="form-control" autocomplete="off" required><span id="emailids"></span>
+			<p id="demo5" style="color:red;"></p><br>
+<button onclick="return validation()">Sign Up</button>
+</form>
+</center>
+</div>
+<script type="text/javascript">
+	function validation()
+	{
+		var user= document.getElementById('Username').value;
+		var password = document.getElementById('password').value;
+		var confrmpassword= document.getElementById('passwordconfrm').value;
+		var mobileno= document.getElementById('numbermobile').value;
+		var email= document.getElementById('emailid').value;
+		if ((user.length<3)||(user.length>20)) {
+			document.getElementById('demo1').innerHTML=" ** please fill the username between 3 and 20";
+			return false;
+		}
+		if (!isNaN(user)) {
+			document.getElementById('demo1').innerHTML=" ** please enter character";
+			return false;
+		}
+		if ((password.length<5)||(password.length>20)) {
+			document.getElementById('demo2').innerHTML=" ** please fill the password between 3 and 20";
+			return false;
+		}
+		if (password!=confrmpassword) {
+			document.getElementById('demo3').innerHTML=" ** passwords are not matching";
+			return false;
+		}
+		
+		if (mobileno.length!=10) {
+			document.getElementById('demo4').innerHTML=" ** should be 10 digits";
+			return false;
+		}
+		if (isNaN(mobileno.length)) {
+			document.getElementById('demo4').innerHTML=" ** should contains only digits";
+			return false;
+		}
+
+		if (email.indexOf('@')<=0) {
+			document.getElementById('demo5').innerHTML=" ** please fill the email id proper format @ ";
+			return false;
+		}
+		if ((email.charAt(email.length-4)!='.')&&(email.charAt(email.length-3)!='.')) {
+			document.getElementById('demo5').innerHTML=" ** please fill the email id in proper format";
+			return false;
+		}
+
+	}
+</script>
+</body>
+</html>

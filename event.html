@@ -1,0 +1,28 @@
+<html>
+<head>
+ <style>
+        h2{font-family:cursive ;}
+    </style>
+</head>
+<body>
+<h2 style="background-color:yellow;"></li><center>EventListener()</center></li></h2><br>
+<p><i><b>Multiple Events<b></i></p><hr>
+<button id="btn">Click Me</button>
+<p id="demo"></p>
+<script>
+var x = document.getElementById("btn");
+x.addEventListener("mouseover", mouseOverFunction);
+x.addEventListener("click", mouseClickFunction);
+x.addEventListener("mouseout", mouseOutFunction);
+function mouseOverFunction() {
+document.getElementById("demo").innerHTML += "Moused over!<br>";
+}
+function mouseClickFunction() {
+document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+function mouseOutFunction() {
+document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
+</script>
+</body>
+</html>

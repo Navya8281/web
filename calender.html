@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>calender</title>
+
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 5px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      font-weight: bold;
+      background-color: #E6E6E6;
+      font-size: 40px;
+    }
+    td{
+       font-size: 50px;
+    }
+  </style>
+</head>
+
+<body>
+<b>Enter the year:&nbsp;&nbsp;&nbsp;<b>
+     <input type="text" placeholder="yyyy" id="t1"><br><br>
+     <b>Enter the month:<b>
+     <input type="text" placeholder="mm" id="t2"><br><br>
+     <button type="button" onclick="call()">Generate</button>
+<center><h2 style="color:black;" id="h1"></h2></center>
+<br>
+<br>
+  <div id="demo"></div>
+
+  <script>
+    function createCalendar(elem, year, month) {
+      document.getElementById("h1").innerHTML;
+      let mon = month - 1;
+      let d = new Date(year, mon);
+ const days1 = ["January","February","March","April","May","June","July","August","September","October ","November","December"];
+      const d1 = new Date(year,mon);
+      let day1 = days1[d1.getMonth()];
+      document.getElementById("h1").innerHTML=" "+day1+" "+year;
+      let table = '<center><table><tr><th style="color:red;">MON</th><th style="color:red;">TUE</th><th style="color:red;">WED</th><th style="color:red;">THU</th><th style="color:red;">FRI</th><th style="color:red;">SAT</th><th style="color:red;">SUN</th></tr><tr>';
+      for (let i = 0; i < getDay(d); i++) {
+        table += '<td></td>';
+      }
+
+      // <td> with actual dates
+      while (d.getMonth() == mon) {
+        if (getDay(d) % 7 != 6)
+            table += '<td>' + d.getDate() + '</td>';
+        else
+            table += '<td style="color:red;">' + d.getDate() + '</td>';
+        if (getDay(d) % 7 == 6) {
+          table += '</tr><tr>';
+        }
+
+        d.setDate(d.getDate() + 1);
+      }
+      if (getDay(d) != 0) {
+        for (let i = getDay(d); i < 7; i++) {
+          table += '<td></td>';
+        }
+      }
+      table += '</tr></table></center>';
+
+      elem.innerHTML = table;
+    }
+
+    function getDay(date) { // get day number from 0 (monday) to 6 (sunday)
+      let day = date.getDay();
+      if (day == 0) day = 7; // make Sunday (0) the last day
+      return day - 1;
+    }
+         function call(){
+            var year = document.getElementById("t1").value;
+            var month = document.getElementById("t2").value;
+            createCalendar(demo,year,month);
+        }
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stringop.css">
+<script>
+
+let string = prompt("Enter a string:");
+let a = prompt("Enter start:");
+let b = prompt("Enter  end:");
+function stringop(string,a,b)
+{
+let slice = string.slice(a,b);
+let replace = string.replace("pastry","sweets");
+
+document.getElementById("demo").innerHTML = section;
+}
+</script>
+<script>
+function Sub()
+{
+let text = "choclate, shake, ice cream, cake, pastry";
+
+let section = text.substring(0,8);
+
+document.getElementById("demo").innerHTML = section;
+}
+</script>
+
+<script>
+function len()
+{
+let text = "choclate, shake, ice cream, cake, pastry";
+
+let section = text.length;
+
+document.getElementById("demo").innerHTML = section;
+}
+function Sop()
+{
+let text = "choclate, shake, ice cream, cake, pastry";
+
+let section = text.slice(5,15);
+
+document.getElementById("demo").innerHTML = section;
+}
+</script>
+
+
+</head>
+<body>
+
+<p id="demo"></p>
+
+<button class="button button3" type="button" value ="SLICE" Onclick="Stringop(string,a,b)">Slice</button>
+<button class="button button4" type="button" value ="Substring" Onclick="Sub()">Sub String</button>
+<button class="button button5" type="button" value ="Replace" Onclick="replace()">Replace</button>
+<button class="button button2" type="button" value ="Length" Onclick="len()">Length</button>
+</body>
+</html>

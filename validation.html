@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Validation</title>
+</head>
+<body>
+<div class="container">
+	<br>
+	<h1 class="text-center text-success">Sign Up</h1>
+<div class="col-lg-8 m-auto d-block">
+	<form class="bg-light" action="#" onsubmit="return validation()">
+		<div class="form-group">
+			<label>Username:</label>
+			<input type="text" name="User" id="Username" class="form-control" autocomplete="off" required>
+			<span id="Usernameid"></span>
+		</div>
+		<div class="form-group">
+			<label>Password:</label>
+			<input type="text" name="User" id="password" class="form-control" autocomplete="off" required>
+			<span id="passwords"></span>
+		</div>
+		<div class="form-group">
+			<label>Confirm Password:</label>
+			<input type="text" name="User" id="passwordconfrm" class="form-control" autocomplete="off" required>
+			<span id="confrmpassword"></span>
+		</div>
+		<div class="form-group">
+			<label>Mobile Number:</label>
+			<input type="text" name="User" id="numbermobile" class="form-control" autocomplete="off" required>
+			<span id="mobilenumber"></span>
+		</div>
+		<div class="form-group">
+			<label>Email:</label>
+			<input type="text" name="User" id="emailid" class="form-control" autocomplete="off" required>
+			<span id="emailids"></span>
+		</div>
+		<input type="submit" name="submit" value="Sign Up" class="btn btn-success">
+	</form>
+	
+</div></div>
+<script type="text/javascript">
+	function validation()
+	{
+		var user= document.getElementById('Username').value;
+		var password = document.getElementById('password').value;
+		var confrmpassword= document.getElementById('passwordconfrm').value;
+		var mobileno= document.getElementById('numbermobile').value;
+		var email= document.getElementById('emailid').value;
+		if (user=="") {
+			document.getElementById('Usernameid').innerHTML=" ** please fill the username";
+			return false;
+		}
+		if (password=="") {
+			document.getElementById('passwords').innerHTML=" ** please fill the password";
+			return false;
+		}
+		if (confrmpassword=="") {
+			document.getElementById('confrmpassword').innerHTML=" ** please fill the confirm password";
+			return false;
+		}
+		if (mobileno=="") {
+			document.getElementById('mobilenumber').innerHTML=" ** please fill the mobile number";
+			return false;
+		}
+		if (email=="") {
+			document.getElementById('emailids').innerHTML=" ** please fill the email";
+			return false;
+		}
+
+	}
+</script>
+</body>
+</html>
