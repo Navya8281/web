@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>QUIZ</title>
+	<title>ONLINE EXAMS</title>
 	<link rel="stylesheet" type="text/css" href="quiz.css">
 </head>
 <body>
@@ -26,7 +26,7 @@ Record Response<br>
 <label>
 	<input type="radio" name="p0" value="2" >Sunnday
 </label><br>
-<label>
+<label id="1">
 	<input type="radio" name="p0" value="3" id="crt3">Wednesday
 </label><br>
 <label>
@@ -38,7 +38,7 @@ Record Response<br>
 <label>
 	<input type="radio" name="p1" value="1" >35
 </label><br>
-<label>
+<label id="2">
 	<input type="radio" name="p1" value="2" id="crt2" >20
 </label><br>
 <label>
@@ -50,7 +50,7 @@ Record Response<br>
 </section>
 <section id="p2">
 <h3>3. Sum of present ages of A,B and C is 92 years. if 4 years ago, the ratio of their ages were 1:2:3 respectively,find A's present age </h3>
-<label>
+<label id="3">
 	<input type="radio" name="p2" value="1" id="crt1">17.3 year
 </label><br>
 <label>
@@ -74,7 +74,7 @@ Record Response<br>
 <label>
 	<input type="radio" name="p3" value="3" >12%
 </label><br>
-<label>
+<label id="4">
 	<input type="radio" name="p3" value="4" id="crt4">20%
 </label>
 </section>
@@ -86,7 +86,7 @@ Record Response<br>
 <label>
 	<input type="radio" name="p4" value="2" >1
 </label><br>
-<label>
+<label id="5">
 	<input type="radio" name="p4" value="3" id="crct3">4
 </label><br>
 <label>
@@ -120,6 +120,11 @@ Record Response<br>
 		{
 			score++;
 		}
+		 document.getElementById('1').style.backgroundColor="lime";
+         document.getElementById('2').style.backgroundColor="lime";
+          document.getElementById('3').style.backgroundColor="lime";
+           document.getElementById('4').style.backgroundColor="lime";
+            document.getElementById('5').style.backgroundColor="lime";
 		document.getElementById("d1").innerHTML = "SCORE";
             document.getElementById("demo1").innerHTML = "Your score is: "+score+"/5";
 
